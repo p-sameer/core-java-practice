@@ -1,26 +1,23 @@
-// WAP to print sorting order of a given array
-
-class Example5{
-
- public static void main(String args[]){
-
- int temp=0;
-int arr[]={34,12,78,90,44,67};
-
- for(int i=0;i<arr.length;i++){
-for(int j=i+1;j<arr.length;j++){
-
- if(arr[i]<arr[j]){
-
- temp=arr[i]; // temp=34
-arr[i]=arr[j]; // arr[i]=12
-arr[j]=temp; //arr[j]=34
-}
-}
-}
-for(int i=0;i<arr.length;i++){
-System.out.print(arr[i]+" ");
-}
-
-}
+import java.util.Scanner;
+ 
+class Example5
+{
+    public static void main(String []s)
+    {
+        int num;
+        //Scanner class to read value
+        Scanner sc=new Scanner(System.in);
+         
+        System.out.print("Enter any integer number: ");
+        num=sc.nextInt();
+         
+        //check condition for +ve, -ve and Zero
+        if(num>0)
+            System.out.println(num + " is POSITIVE NUMBER.");
+        else if(num<0)
+            System.out.println(num + " is NEGATIVE NUMBER.");
+        else
+            System.out.println("IT's ZERO.");
+         
+    }
 }

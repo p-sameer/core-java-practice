@@ -1,34 +1,32 @@
 import java.util.Scanner;
+// main class
 class Example3{
-  
 // main method
-public static void main(String[] args)
-{
-int arr[] = {3,7,5,7,3}; // unique = 3, 7, 5
-int index = 0;
-int[] unique = new int[5];
-
- for(int i = 0; i < 5; i++)
-{
-int temp = 0;
-for(int j = 0; j < i; j++)
-{
-if(arr[i] == arr[j])
-{
-temp = 1;
-break;
-}
-}
-if(temp == 0)
-{
-unique[index] = arr[i];
-index++;
-  
-}
-}
- for(int k = 0; k < index; k++)
-{
-System.out.print(unique[k]+ ", ");
-}
-}
+public static void main(String[] args){
+  Scanner s= new Scanner(System.in);
+  System.out.print("Enter any year:");
+  int year =s.nextInt();
+  boolean flag =false;
+  if(year % 400 == 0)
+  {
+    flag=true;
+  }
+  else if(year% 100==0)
+  {
+    flag=false;
+  }
+  else if(year %4==0)
+  {
+   
+    flag=false;
+  }
+  if(flag)
+  {
+    System.out.println("Year"+year+" is a Leap year");
+    }
+  else
+  {
+    System.out.println("Year"+year+" is not a leap yeae");
+  }
+  }
 }

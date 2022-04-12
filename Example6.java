@@ -1,25 +1,23 @@
-// WAP to print frequency of each element in a given array.
+import java.util.Scanner;
 
-class Example6{
+public class Example6 {
 
- public static void main(String args[]){
-
- int count=1;
-int arr[]={23,78,45,12,23,23,12,90};
-
- for(int i=0;i<arr.length;i++){
-for(int j=i+1;j<arr.length;j++){
-
- if(arr[i]==arr[j]){
-count++;
-arr[j]=0;
-}
-}
-if(arr[i]!=0){
-System.out.println(arr[i]+" : "+count);
-}
-count=1;
-}
-
-}
+	private static Scanner sc;
+	public static void main(String[] args) 
+	{
+		int number;
+		sc = new Scanner(System.in);
+		
+		System.out.print(" Please Enter any Number to Check whether it is Divisible by 5 and 11 : ");
+		number = sc.nextInt();	
+		
+		if((number % 5 == 0) && (number % 11 == 0))
+		{
+			System.out.println("\n Given number " + number + " is Divisible by 5 and 11"); 
+		}
+		else
+		{
+			System.out.println("\n Given number " + number + " is Not Divisible by 5 and 11"); 
+		}	
+	}
 }
